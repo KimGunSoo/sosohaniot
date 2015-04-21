@@ -4,3 +4,17 @@ This repository will be used to study the IOT.
 
 
 member : kimgunsoo, lightreal, junu
+
+
+######### Cross Compile #########
+1. Install raspberrypi cross toolchain.
+  $ ./cross_tools/00_set_rpi_tools.sh
+
+2. Set cross compile environment variable.
+  $ source ./cross_tools/01_set_cross_env.sh
+
+3. Build your source code.
+  compiler : $RPI_TOOL/bin/arm-linux-gnueabihf
+  include path : ??
+  library path : ??
+#################################
