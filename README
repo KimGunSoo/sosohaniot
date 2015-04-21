@@ -14,7 +14,7 @@ member : kimgunsoo, lightreal, junu
   $ source ./cross_tools/01_set_cross_env.sh
 
 3. Build your source code.
-  compiler : $RPI_TOOL/bin/arm-linux-gnueabihf
+  compiler : $RPI_TOOL/bin/arm-linux-gnueabihf-gcc
   include path : ??
   library path : ??
 #################################
