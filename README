@@ -6,6 +6,17 @@ This repository will be used to study the IOT.
 member : kimgunsoo, lightreal, junu, Kitae Kim
 
 
+####### Start sosohan IOT #######
+1. Run django server to control with REST API.
+  $ ./01_run_django_server.sh
+
+2. Request the REST command to django
+  - Format: http://<rasp IP>/<command>
+  - command: rasp_cmd_go, ...
+  - example > http://192.168.137.111:8000/rasp_cmd_go/
+#################################
+
+
 ######### Cross Compile #########
 1. Install raspberrypi cross toolchain.
   $ ./cross_tools/00_set_rpi_tools.sh
@@ -18,3 +29,4 @@ member : kimgunsoo, lightreal, junu, Kitae Kim
   include path : ??
   library path : ??
 #################################
+
