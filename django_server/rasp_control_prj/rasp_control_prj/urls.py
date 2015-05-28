@@ -15,11 +15,19 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-from rasp_if.views import rasp_cmd_go
+from rasp_if.motor_control import rasp_cmd_init
+from rasp_if.motor_control import rasp_cmd_deinit
+from rasp_if.motor_control import rasp_cmd_getstate
+from rasp_if.motor_control import rasp_cmd_go
+from rasp_if.motor_control import rasp_cmd_back
 from rasp_if.views import index
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^rasp_cmd_init/', rasp_cmd_init),
+    url(r'^rasp_cmd_deinit/', rasp_cmd_deinit),
+    url(r'^rasp_cmd_getstate/', rasp_cmd_getstate),
     url(r'^rasp_cmd_go/', rasp_cmd_go),
+    url(r'^rasp_cmd_back/', rasp_cmd_back),
     url(r'^$', index),
 ]

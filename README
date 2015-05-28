@@ -12,7 +12,13 @@ member : kimgunsoo, lightreal, junu, Kitae Kim
 
 2. Request the REST command to django
   - Format: http://<rasp IP>/<command>
-  - command: rasp_cmd_go, ...
+  - command:
+    - rasp_cmd_init : initialize GPIO pin.
+    - rasp_cmd_deinit : deinitialize GPIO pin.
+    - rasp_cmd_getstate : get GPIO pin state.
+    - rasp_cmd_go : motor go.
+    - rasp_cmd_back : motor back.
+
   - example > http://192.168.137.111:8000/rasp_cmd_go/
 #################################
 
