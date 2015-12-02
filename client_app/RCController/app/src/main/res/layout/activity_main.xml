@@ -44,6 +44,7 @@
         android:layout_alignTop="@+id/ip_text"
         android:layout_toRightOf="@+id/ip_text"
         android:inputType="textUri"
+        android:text="192.168.43.149"
         android:layout_toStartOf="@+id/port_text"
         android:layout_toLeftOf="@+id/port_text" />
 
@@ -51,18 +52,19 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/connect"
-        android:id="@+id/connect_button"
-        android:onClick="onClickedConnectBtn"
+        android:text="@string/init"
+        android:id="@+id/init_button"
+        android:onClick="onClickedInitBtn"
+        android:layout_marginTop="18dp"
         android:layout_below="@+id/ip_editText"
         android:layout_alignLeft="@+id/ip_editText"
-        android:layout_alignStart="@+id/ip_editText"
-        android:layout_marginTop="17dp" />
+        android:layout_alignStart="@+id/ip_editText" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/port_editText"
+        android:text="8000"
         android:layout_alignTop="@+id/port_text"
         android:layout_toRightOf="@+id/port_text"
         android:inputType="text"
@@ -79,9 +81,41 @@
         android:enabled="false"
         android:inputType="none"
         android:linksClickable="false"
-        android:text="disconnected"
-        android:layout_alignBottom="@+id/connect_button"
-        android:layout_toRightOf="@+id/connect_button"
-        android:layout_toEndOf="@+id/connect_button" />
+        android:text="Deinitialized"
+        android:layout_below="@+id/init_button"
+        android:layout_alignLeft="@+id/init_button"
+        android:layout_alignStart="@+id/init_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/go"
+        android:id="@+id/go_button"
+        android:onClick="onClickedGoBtn"
+        android:layout_below="@+id/init_button"
+        android:layout_alignLeft="@+id/init_button"
+        android:layout_marginTop="78dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/back"
+        android:id="@+id/back_button"
+        android:onClick="onClickedBackBtn"
+        android:layout_marginRight="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_alignTop="@+id/go_button"
+        android:layout_alignRight="@+id/port_editText"
+        android:layout_alignEnd="@+id/port_editText" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deinit"
+        android:id="@+id/deinit_button"
+        android:onClick="onClickedDeinitBtn"
+        android:layout_alignTop="@+id/init_button"
+        android:layout_toRightOf="@+id/connect_state_editText"
+        android:layout_toEndOf="@+id/connect_state_editText" />
 
 </RelativeLayout>

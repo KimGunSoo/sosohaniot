@@ -5,5 +5,8 @@
     <string name="connection_settings">Enter remote IP address and Port number :</string>
     <string name="ip">IP :</string>
     <string name="port">Port :</string>
-    <string name="connect">Connect</string>
+    <string name="init">Init</string>
+    <string name="deinit">Deinit</string>
+    <string name="go">Go</string>
+    <string name="back">Back</string>
 </resources>
