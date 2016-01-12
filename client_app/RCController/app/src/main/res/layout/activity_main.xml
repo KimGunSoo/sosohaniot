@@ -118,4 +118,11 @@
         android:layout_toRightOf="@+id/connect_state_editText"
         android:layout_toEndOf="@+id/connect_state_editText" />
 
+    <VideoView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rasp_camera_view"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/go_button" />
+
 </RelativeLayout>

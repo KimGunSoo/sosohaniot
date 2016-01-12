@@ -1,6 +1,7 @@
 package com.sosohan.iot.rccontroller;
 
 import android.app.Activity;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
@@ -9,6 +10,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.MediaController;
+import android.widget.VideoView;
 
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -41,6 +44,9 @@ public class MainActivity extends Activity{
 
     RaspControlTask raspTask;
 
+    private VideoView cameraView;
+    private static final String rtspUrlString = "rtsp://wowzaec2demo.streamlock.net/vod/mp4:BigBuckBunny_115k.mov";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +65,12 @@ public class MainActivity extends Activity{
         deinitBtn.setEnabled(false);
 
         RaspState.setRaspState(STATE_DEINITIALIZED);
+
+        cameraView = (VideoView) findViewById(R.id.rasp_camera_view);
+        cameraView.setVideoURI(Uri.parse(rtspUrlString));
+        cameraView.setMediaController(new MediaController(this));
+        cameraView.requestFocus();
+        cameraView.start();
     }
 
     @Override
